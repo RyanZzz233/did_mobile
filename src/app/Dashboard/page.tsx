@@ -129,7 +129,7 @@ useCheckFlag();
             Page:
             <select value={page} onChange={handlePageChange}>
               {/*//@ts-ignore*/}
-              {Array.from({length: datad?.TotalPages || 1}, (_, i) => i + 1).map((pageNumber) => (
+              {Array.from({length: data?.TotalPages || 1}, (_, i) => i + 1).map((pageNumber) => (
                 <option key={pageNumber} value={pageNumber}>
                   {pageNumber}
                 </option>

@@ -17,7 +17,6 @@ const Search = () => {
   const [searchInput, setSearchInput] = useState("");
   const [hasSearched, setHasSearched] = useState(false);
   const [page, setPage] = useState(1);
-  const [datad, setDatad] = React.useState([]);
   
 
   const router = useRouter();
@@ -61,27 +60,19 @@ const Search = () => {
     setSearchInput("");
     setHasSearched(false);
     setPage(1);
-    setDatad([]);
   };
 
   const handleInputChange = (event:any) => {
     setInputValue(event.target.value);
     setHasSearched(false);
     setPage(1);
-    setDatad([]);
   };
 
   const handleSearch = () => {
     setSearchInput(inputValue);
     setHasSearched(true);
-    setDatad(data);
   };
 
-  useEffect(() => {
-    if (data) {
-      setDatad(data);
-    }
-  }, [data]);
 
   return (
     <div className="relative pt-8 lg:pt-0">
@@ -156,7 +147,7 @@ const Search = () => {
             <Loading1 />
             ) : (
               //@ts-ignore
-              hasSearched && datad?.Domains.length > 0 ? (
+              hasSearched && data?.Domains.length > 0 ? (
                 data.Domains.map((domain:any) => (
                   <div className="flex items-center pb-4" key={domain.domain}>
                     <div className="">
@@ -189,7 +180,7 @@ const Search = () => {
             Page:
             <select value={page} onChange={handlePageChange}>
               {/*//@ts-ignore*/}
-              {Array.from({length: datad?.TotalPages || 1}, (_, i) => i + 1).map((pageNumber) => (
+              {Array.from({length: data?.TotalPages || 1}, (_, i) => i + 1).map((pageNumber) => (
                 <option key={pageNumber} value={pageNumber}>
                   {pageNumber}
                 </option>

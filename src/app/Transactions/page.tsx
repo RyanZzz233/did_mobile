@@ -15,7 +15,6 @@ const Search = () => {
   const [searchInput, setSearchInput] = useState("");
   const [hasSearched, setHasSearched] = useState(false);
   const [page, setPage] = useState(1);
-  const [datat, setDatat] = React.useState([]);
 
   useCheckFlag();
 
@@ -40,27 +39,18 @@ const Search = () => {
     setSearchInput("");
     setHasSearched(false);
     setPage(1);
-    setDatat([]);
   };
 
   const handleInputChange = (event:any) => {
     setInputValue(event.target.value);
     setHasSearched(false);
-    setDatat([]);
     setPage(1);
   };
 
   const handleSearch = () => {
     setSearchInput(inputValue);
     setHasSearched(true);
-    setDatat(data);
   };
-
-  useEffect(() => {
-    if (data) {
-      setDatat(data);
-    }
-  }, [data]);
 
   return (
     <div className="relative pt-8 lg:pt-0">
@@ -136,7 +126,7 @@ const Search = () => {
             <Loading1 />
             ) : (
               //@ts-ignore
-              hasSearched && datat?.Transactions.length > 0 ? (
+              hasSearched && data?.Transactions.length > 0 ? (
                 data.Transactions.map((tx:any) => (
                   <div className="flex items-center pb-4" key={tx.txRef}>
                     <div className="">
@@ -184,7 +174,7 @@ const Search = () => {
             Page:
             <select value={page} onChange={handlePageChange}>
               {/*//@ts-ignore*/}
-              {Array.from({length: datat?.TotalPages || 1}, (_, i) => i + 1).map((pageNumber) => (
+              {Array.from({length: data?.TotalPages || 1}, (_, i) => i + 1).map((pageNumber) => (
                 <option key={pageNumber} value={pageNumber}>
                   {pageNumber}
                 </option>
