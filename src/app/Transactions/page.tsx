@@ -69,7 +69,7 @@ const Search = () => {
           {/* {searchType === "domain" ? "Search DID": "Search User"} */}
           Transactions Tracker
         </h1>
-        <div className="pb-10 pl-8 lg:pl-0">
+        <div className="pb-10 pl-4 lg:pl-0">
           <select value={searchType} onChange={handleSearchTypeChange}>
             <option value="domain">Search by DID</option>
             <option value="owner">Search by User</option>
