@@ -17,6 +17,12 @@ declare global {
 const TopNavBar = () => {
     const router = useRouter();
     const [isMetaMaskConnected, setisMetaMaskConnected] = useState(false);
+
+    useEffect(() => {
+      if (typeof window !== 'undefined' && window.ethereum) {
+        setisMetaMaskConnected(window.ethereum.isConnected());
+      }
+    }, []);
   
     return (
       <div className="inline-flex justify-end items-center pr-4 bg-transparent fixed top-4 right-0">
