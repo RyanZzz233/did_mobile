@@ -98,7 +98,7 @@ return (
     </Link>
     <div className="flex flex-row lg:flex-col gap-x-1 gap-y-6 lg:gap-y-1 lg:gap-x-6 text-apple-black font-bold lg:mt-32 px-4 lg:pl-6 overflow-auto justify-center space-x-1 lg:space-x-0">   
       {links.map((link) => (
-        (link.id !== 4 || isMetaMaskConnected) && (
+        (link.id !== 4 || (link.id === 4 && isMetaMaskConnected))  && (
           <div key={link.id} className="text-sm sm:text-base">
             <Link href={link.url}>
               <div
