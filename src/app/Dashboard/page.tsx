@@ -101,23 +101,23 @@ useCheckFlag();
                       </h2>
                     </div>
                     <div>
-                    <div>
-                      <div className="py-10">
-                        {data?.Domains.length > 0 ? (
-                          data.Domains.map((domain:any) => (
-                            <div className="flex pb-4" key={domain._id}>
-                              <div className="flex">
-                                <h2 className="text-xs sm:text-lg lg:text-xl text-apple-black font-light">
-                                  DID: {domain.domain}
-                                </h2>
+                      <div>
+                        <div className="py-10">
+                          {data?.Domains.length > 0 ? (
+                            data.Domains.map((domain:any) => (
+                              <div className="flex pb-4" key={domain._id}>
+                                <div className="flex">
+                                  <h2 className="text-xs sm:text-lg lg:text-xl text-apple-black font-light">
+                                    DID: {domain.domain}
+                                  </h2>
+                                </div>
                               </div>
-                            </div>
-                          ))
-                        ) : (
-                          <div className="text-xs sm:text-lg lg:text-xl">No data matched, please retry.</div>
-                        )}
+                            ))
+                          ) : (
+                            <div className="text-xs sm:text-lg lg:text-xl">No data matched, please retry.</div>
+                          )}
+                        </div>
                       </div>
-                    </div>
                     </div>
                   </>
                 )}

@@ -1,13 +1,18 @@
 import Image from "next/image";
 import React from "react";
 import styles from './page.module.css'
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
   //console.log("Hello")
+  const pathname = usePathname();
 
   return (
     <div className={styles.container}>
-      <div className="text-xxxs sm:text-xs lg:text-md">@Meta Metopia Technology Company Limited</div>
+      {(pathname === '/Start') &&(
+      <div className="text-xxxs sm:text-xs lg:text-md ">@Meta Metopia Technology Company Limited</div>)}
+      {(pathname !== '/Start') &&(
+      <div className="text-xxxs sm:text-xs lg:text-md pl-0 lg:pl-60">@Meta Metopia Technology Company Limited</div>)}
       <div>
         <div className={styles.social}>
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">

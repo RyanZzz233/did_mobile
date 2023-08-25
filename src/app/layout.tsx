@@ -30,7 +30,7 @@ export default function RootLayout({
           <div className="pl-0 lg:pl-60 flex-grow overflow-y-auto pt-10 z-60">
             {children}
           </div>
-          <div className="pl-0 lg:pl-60 pt-16 pr-4 z-50">
+          <div className="pt-16 pr-4 z-50">
             <Footer />
           </div>
         </div>
