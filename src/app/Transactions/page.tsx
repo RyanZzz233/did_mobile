@@ -73,7 +73,7 @@ const Search = () => {
           <select value={searchType} onChange={handleSearchTypeChange}>
             <option value="domain">Search by DID</option>
             <option value="owner">Search by User</option>
-            <option value="txRef">Search by Transaction ID</option>
+            <option value="txRef">Search by TxID</option>
           </select>
         </div>
         <div className="flex flex-wrap">
