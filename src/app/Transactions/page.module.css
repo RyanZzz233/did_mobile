@@ -1,5 +1,5 @@
 .inputwrapper {
-  width: 270px; 
+  width: 250px; 
   display: flex;
   align-items: center; /* equivalent to Tailwind's items-center */
   justify-content: space-between; /* equivalent to Tailwind's justify-between */
