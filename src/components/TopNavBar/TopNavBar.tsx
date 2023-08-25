@@ -11,7 +11,7 @@ const TopNavBar = () => {
     const router = useRouter();
   
     return (
-      <div className="fixed top-0 left-0 right-0 h-16 flex justify-end items-center pr-4 bg-transparent z-20">
+      <div className="inline-flex justify-end items-center pr-4 bg-transparent fixed top-4 right-0">
         <button
           className="
             px-3 py-1

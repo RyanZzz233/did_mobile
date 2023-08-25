@@ -1,0 +1,31 @@
+.inputwrapper {
+  width: 230px; 
+  display: flex;
+  align-items: center; /* equivalent to Tailwind's items-center */
+  justify-content: space-between; /* equivalent to Tailwind's justify-between */
+  background: white; /* equivalent to Tailwind's bg-white */
+  border-radius: 9999px; /* equivalent to Tailwind's rounded-full */
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.06), 0px 0px 2px rgba(0, 0, 0, 0.07); /* equivalent to Tailwind's shadow-sm */
+  padding: 0.5rem 0.75rem; /* equivalent to Tailwind's px-3 py-2 */
+  border: 1px solid grey; /* equivalent to Tailwind's border border-gray-300 */
+  margin-bottom: 3rem; /* equivalent to Tailwind's mb-8 */
+  margin-left: 1rem; /* equivalent to Tailwind's mb-8 */
+}
+
+.inputwrapper:focus-within {
+  box-shadow: 0px 0px 10px 0px black;
+  transition: box-shadow 250ms ease-in;
+}
+
+@media (min-width: 640px) {
+  .inputwrapper {
+    width: 500px;
+  }
+}  
+
+@media (min-width: 1024px) {
+  .inputwrapper {
+    width: 600px; /* Half width at 'lg' size and above */
+    margin-left: 0rem; /* equivalent to Tailwind's mb-8 */
+  }
+}

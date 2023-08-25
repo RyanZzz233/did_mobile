@@ -21,16 +21,16 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="container">
-          <div className="relative z-10">
+          <div className="relative z-30">
             <TopNavBar />
           </div>
           <div className="relative z-20">
             <NavBar />
           </div>
-          <div className="pl-60 flex-grow overflow-y-auto pt-10">
+          <div className="pl-0 lg:pl-60 flex-grow overflow-y-auto pt-10">
             {children}
           </div>
-          <div className="pt-16 pl-60 pr-4">
+          <div className="pl-0 lg:pl-60 pt-16 pr-4 z-50">
             <Footer />
           </div>
         </div>

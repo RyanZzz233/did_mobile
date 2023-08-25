@@ -29,6 +29,11 @@ module.exports = {
         'title-blue':'#134a72',
 
       },
+      fontSize: {
+        'xxs': '0.6rem', // 8px
+        'xxxs': '0.43rem',
+        'mdlg': '0.9rem',
+      },
     },
   },
   plugins: [],

@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <div className={styles.container}>
-      <div>@Meta Metopia Technology Company Limited</div>
+      <div className="text-xxxs sm:text-xs lg:text-md">@Meta Metopia Technology Company Limited</div>
       <div>
         <div className={styles.social}>
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
