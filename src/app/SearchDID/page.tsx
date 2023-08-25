@@ -91,7 +91,7 @@ const Search = () => {
           {/* {searchType === "domain" ? "Search by DID": "Search by User"} */}
           Web3.0 DID Searcher
         </h1>
-        <div className="pb-10">
+        <div className="pb-10 ">
           <select value={searchType} onChange={handleSearchTypeChange}>
             <option value="domain">Search by DID</option>
             <option value="owner">Search by User</option>
