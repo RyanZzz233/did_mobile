@@ -31,7 +31,7 @@ export async function GET(request: NextRequest) {
   url.searchParams.append("value", value!);
   url.searchParams.append("page", page!);
 
-  //console.log(url.href);
+  console.log(url.href);
 
   try {
     const response = await fetch(url.href, {
@@ -45,7 +45,7 @@ export async function GET(request: NextRequest) {
     }
 
     const data = await response.json();
-    //console.log(data)
+    console.log(data)
 
     // const base64Data = await response.text();
     // const decodedData = Buffer.from(base64Data, 'base64').toString('utf-8');
