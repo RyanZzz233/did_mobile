@@ -29,9 +29,9 @@ const Search = () => {
           html: `
             <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
               <h2 style="color: #2a9df4;">Hello there,</h2>
-              <p>Welcome to the Web 3.0 revolution. Here's your preferred Decentralized Identifier (DID):</p>
+              <p>Welcome to the Web 3.0 revolution. Here is your preferred Decentralized Identifier (DID):</p>
               <h1 style="background-color: #f0f0f0; padding: 10px; border-radius: 5px;">${newItem.pdid.trim()}</h1>
-              <p>We'll guide you through the rest when ready.</p>
+              <p>We will guide you through the rest when ready.</p>
               <p>Best regards,</p>
               <p>Meta Metopia Team</p>
             </div>
@@ -81,7 +81,7 @@ const Search = () => {
                     }
                   >
                     Join the Web 3.0 revolution. Submit your email and preferred
-                    DID below. We'll guide you through the rest when ready.
+                    DID below. We will guide you through the rest when ready.
                   </p>
                   <div className="pt-4 lg:space-y-2">
                     <div className="flex w-3/4 sm:w-2/3 lg:w-2/3 flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-2">
