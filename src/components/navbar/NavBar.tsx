@@ -7,7 +7,13 @@ import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { or } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
+import { MetaMaskInpageProvider } from "@metamask/providers";
 
+declare global {
+  interface Window{
+    ethereum?:MetaMaskInpageProvider
+  }
+}
 
 //@ts-ignore
 
@@ -42,6 +48,7 @@ const NavBar = () => {
   const [activeMenu, setActiveMenu] = React.useState("");
   const pathname = usePathname();
   const [inflag, setinflag] = useState(1);
+  const [isMetaMaskConnected, setisMetaMaskConnected] = useState(false);
 
   useEffect(() => {
     fetch('/api/checkFlag')
@@ -55,6 +62,12 @@ const NavBar = () => {
         }
       });
   }, [pathname]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.ethereum) {
+      setisMetaMaskConnected(window.ethereum.isConnected());
+    }
+  }, []);
 
   
   if ((pathname === '/Start')||(inflag === 1)) {
@@ -83,19 +96,22 @@ return (
         />
       </div>
     </Link>
-    <div className="flex flex-row lg:flex-col gap-x-1 gap-y-6 lg:gap-y-1 lg:gap-x-6 text-apple-black font-bold lg:mt-32 px-4 lg:pl-6 overflow-auto justify-center space-x-1 lg:space-x-0">   {links.map((link) => (
-        <div key={link.id} className="text-sm sm:text-base">
-          <Link href={link.url}>
-            <div
-              className={`p-2 ${pathname === link.url ?
-                'text-tw-black font-normal transition-all duration-200 ease-in-out' :
-                'transition-all duration-200 ease-in-out hover:text-tw-black font-normal'
-              }`}
-            >
-              {link.title}
-            </div>
-          </Link>
-        </div>
+    <div className="flex flex-row lg:flex-col gap-x-1 gap-y-6 lg:gap-y-1 lg:gap-x-6 text-apple-black font-bold lg:mt-32 px-4 lg:pl-6 overflow-auto justify-center space-x-1 lg:space-x-0">   
+      {links.map((link) => (
+        (link.id !== 4 || isMetaMaskConnected) && (
+          <div key={link.id} className="text-sm sm:text-base">
+            <Link href={link.url}>
+              <div
+                className={`p-2 ${pathname === link.url ?
+                  'text-tw-black font-normal transition-all duration-200 ease-in-out' :
+                  'transition-all duration-200 ease-in-out hover:text-tw-black font-normal'
+                }`}
+              >
+                {link.title}
+              </div>
+            </Link>
+          </div>
+        )
       ))}
     </div>
   </nav>
