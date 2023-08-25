@@ -59,7 +59,7 @@ const NavBar = () => {
   
   if ((pathname === '/Start')||(inflag === 1)) {
     return (
-      <div className="fixed top-0 left-0 w-full lg:w-24 justify-start transition-width duration-100 ease-in-out lg:bottom-0">
+      <button className="fixed top-0 left-0 w-full lg:w-24 justify-start transition-width duration-100 ease-in-out lg:bottom-0">
         <Link href="/">
           <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start space-x-2 p-4 lg:absolute lg:top-0 lg:left-0 lg:mt-4 lg:pb-10 cursor-pointer">
             <img
@@ -69,7 +69,7 @@ const NavBar = () => {
             />
           </div>
         </Link>
-      </div>
+      </button>
     );
   }
 return (
