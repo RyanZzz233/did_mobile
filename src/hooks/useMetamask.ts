@@ -43,7 +43,7 @@ export default function useMetamask() {
     const currentAccount = await ethers.getAddress(accounts[0])
 
     await axios.post("/api/auth/signIn", {
-      address: accounts[0],
+      address: currentAccount,
     });
 
     router.refresh();
