@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
+import { ethers } from "ethers";
 
 export default function useMetamask() {
   const [account, setAccount] = useState();
@@ -38,6 +39,8 @@ export default function useMetamask() {
     const accounts = await (window as any).ethereum.request({
       method: "eth_requestAccounts",
     });
+
+    const currentAccount = await ethers.getAddress(accounts[0])
 
     await axios.post("/api/auth/signIn", {
       address: accounts[0],
