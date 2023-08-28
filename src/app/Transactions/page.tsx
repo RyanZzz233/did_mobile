@@ -53,11 +53,11 @@ const Search = () => {
   };
 
   return (
-    <div className="relative pt-8 lg:pt-0">
+    <div className="relative pt-8 md:pt-0">
       <div className="">
         <h1
           className={
-            "relative text-2xl sm:text-4xl lg:text-5xl xl:text-5xl font-extrabold leading-tight tracking-tighter text-left pb-2 bg-gradient-to-r from-tw-purple via-tw-blue to-tw-blue text-transparent bg-clip-text"
+            "relative text-2xl sm:text-4xl md:text-5xl xl:text-5xl font-extrabold leading-tight tracking-tighter text-left pb-2 bg-gradient-to-r from-tw-purple via-tw-blue to-tw-blue text-transparent bg-clip-text"
           }
           style={{
             backgroundImage: "url('https://pub-3890daa6d3af4fe09ab0c284ce757dd9.r2.dev/Screen Shot 2023-07-11 at 5.27.25 PM.png')",
@@ -69,7 +69,7 @@ const Search = () => {
           {/* {searchType === "domain" ? "Search DID": "Search User"} */}
           Transactions Tracker
         </h1>
-        <div className="pb-10 pl-4 lg:pl-0">
+        <div className="pb-10 pl-4 md:pl-0">
           <select value={searchType} onChange={handleSearchTypeChange}>
             <option value="domain">Search by DID</option>
             <option value="owner">Search by User</option>
@@ -131,7 +131,7 @@ const Search = () => {
                   <div className="flex items-center pb-4" key={tx.txRef}>
                     <div className="">
                       <div className="flex flex-col">
-                        <div className="text-xxs sm:text-lg lg:text-xl text-apple-black font-light">
+                        <div className="text-xxs sm:text-lg md:text-xl text-apple-black font-light">
                           <h2>
                             <strong>Domain:</strong> {tx.domain}
                           </h2>
@@ -151,10 +151,10 @@ const Search = () => {
                           )}
                         </div>
                         <div className="text-apple-black font-light">
-                          <h2 className="text-xxs sm:text-lg lg:text-xl">
+                          <h2 className="text-xxs sm:text-lg md:text-xl">
                               <strong>Transaction ID:</strong>
                           </h2>
-                          <h2 className="text-xxxs sm:text-mdlg lg:text-lg">
+                          <h2 className="text-xxxs sm:text-mdlg md:text-lg">
                               <strong></strong> {tx.txRef}
                           </h2>
                         </div>
