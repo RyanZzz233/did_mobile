@@ -72,9 +72,9 @@ const NavBar = () => {
   
   if ((pathname === '/Start')||(inflag === 1)) {
     return (
-      <div className="fixed top-0 left-0 w-full lg:w-48 justify-start transition-width duration-100 ease-in-out lg:bottom-0 h-10">
+      <div className="fixed top-0 left-0 w-full md:w-48 justify-start transition-width duration-100 ease-in-out md:bottom-0 h-10">
         <Link href="/">
-          <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start space-x-2 p-4 lg:absolute lg:top-0 lg:left-0 lg:mt-4 lg:pb-10 cursor-pointer">
+          <div className="flex flex-col md:flex-row items-center justify-center md:justify-start space-x-2 p-4 md:absolute md:top-0 md:left-0 md:mt-4 md:pb-10 cursor-pointer">
             <img
               src="https://pub-3890daa6d3af4fe09ab0c284ce757dd9.r2.dev/logo.webp"
               alt="Logo"
@@ -86,9 +86,9 @@ const NavBar = () => {
     );
   }
 return (
-  <nav className="fixed top-0 left-0 w-full lg:w-48 lg:flex lg:flex-col bg-apple-grey lg:justify-start transition-width duration-300 ease-in-out lg:bottom-0 lg:border-r border-grey lg:hover:w-48 justify-center lg:">
+  <nav className="fixed top-0 left-0 w-full md:w-48 md:flex md:flex-col bg-apple-grey md:justify-start transition-width duration-300 ease-in-out md:bottom-0 md:border-r border-grey md:hover:w-48 justify-center md:">
     <Link href="/">
-      <div className="flex items-center justify-center lg:justify-start space-x-2 p-4 lg:absolute lg:top-0 lg:left-0 lg:mt-4 lg:pb-10 cursor-pointer">
+      <div className="flex items-center justify-center md:justify-start space-x-2 p-4 md:absolute md:top-0 md:left-0 md:mt-4 md:pb-10 cursor-pointer">
         <img
           src="https://pub-3890daa6d3af4fe09ab0c284ce757dd9.r2.dev/logo.webp"
           alt="Logo"
@@ -96,7 +96,7 @@ return (
         />
       </div>
     </Link>
-    <div className="flex flex-row lg:flex-col gap-x-1 gap-y-6 lg:gap-y-1 lg:gap-x-6 text-apple-black font-bold lg:mt-32 px-4 lg:pl-6 overflow-auto justify-center space-x-1 lg:space-x-0">   
+    <div className="flex flex-row md:flex-col gap-x-1 gap-y-6 md:gap-y-1 md:gap-x-6 text-apple-black font-bold md:mt-32 px-4 md:pl-6 overflow-auto justify-center space-x-1 md:space-x-0">   
       {links.map((link) => (
         (link.id !== 4 || (link.id === 4 && isMetaMaskConnected))  && (
           <div key={link.id} className="text-sm sm:text-base">
