@@ -68,11 +68,11 @@ useCheckFlag();
   };
 
   return (
-    <div className="relative pt-8 md:pt-0">
+    <div className="relative pt-8 lg:pt-0">
       <div className="">
         <h1
           className={
-            "relative text-2xl sm:text-4xl md:text-5xl xl:text-5xl font-extrabold leading-tight tracking-tighter text-left pb-2 bg-gradient-to-r from-tw-purple via-tw-blue to-tw-blue text-transparent bg-clip-text"
+            "relative text-2xl sm:text-4xl lg:text-5xl xl:text-5xl font-extrabold leading-tight tracking-tighter text-left pb-2 bg-gradient-to-r from-tw-purple via-tw-blue to-tw-blue text-transparent bg-clip-text"
           }
           style={{
             backgroundImage: "url('https://pub-3890daa6d3af4fe09ab0c284ce757dd9.r2.dev/Screen Shot 2023-07-11 at 5.27.25 PM.png')",
@@ -93,10 +93,10 @@ useCheckFlag();
                 ) : (
                   <>
                     <div className="pb-4">
-                      <h2 className="text-xxs sm:text-lg md:text-xl text-apple-black font-light">
+                      <h2 className="text-xxs sm:text-lg lg:text-xl text-apple-black font-light">
                         The DID owned by wallet address
                       </h2>
-                      <h2 className="text-xxs sm:text-lg md:text-xl text-apple-black font-light">
+                      <h2 className="text-xxs sm:text-lg lg:text-xl text-apple-black font-light">
                         {username}
                       </h2>
                     </div>
@@ -107,14 +107,14 @@ useCheckFlag();
                             data.Domains.map((domain:any) => (
                               <div className="flex pb-4" key={domain._id}>
                                 <div className="flex">
-                                  <h2 className="text-xs sm:text-lg md:text-xl text-apple-black font-light">
+                                  <h2 className="text-xs sm:text-lg lg:text-xl text-apple-black font-light">
                                     DID: {domain.domain}
                                   </h2>
                                 </div>
                               </div>
                             ))
                           ) : (
-                            <div className="text-xs sm:text-lg md:text-xl">No data matched, please retry.</div>
+                            <div className="text-xs sm:text-lg lg:text-xl">No data matched, please retry.</div>
                           )}
                         </div>
                       </div>

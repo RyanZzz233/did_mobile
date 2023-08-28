@@ -47,18 +47,18 @@ const Search = () => {
 
   return (
     <div className="flex">
-      <div className="fixed top-0 right-0 bottom-0 w-0 md:w-1/2">
+      <div className="fixed top-0 right-0 bottom-0 w-0 lg:w-1/2">
         <img
           className="object-cover h-full w-full"
           src="https://pub-3890daa6d3af4fe09ab0c284ce757dd9.r2.dev/shubham-dhage-_rZnChsIFuQ-unsplash.jpg"
           alt="Description"
         />
       </div>
-      <div className="fixed top-0 left-0 bottom-0 w-full md:w-1/2 flex flex-col justify-start border-r border-grey transition-width duration-300 ease-in-out bg-apple-grey">
+      <div className="fixed top-0 left-0 bottom-0 w-full lg:w-1/2 flex flex-col justify-start border-r border-grey transition-width duration-300 ease-in-out bg-apple-grey">
         <div className="pt-36 pl-12 pr-8">
           <h1
             className={
-            "relative text-xl sm:text-2xl md:text-2xl md:text-3xl xl:text-4xl font-extrabold leading-tight tracking-tighter text-left pb-2 bg-gradient-to-r from-tw-purple via-tw-blue to-tw-blue text-transparent bg-clip-text"
+            "relative text-xl sm:text-2xl lg:text-2xl lg:text-3xl xl:text-4xl font-extrabold leading-tight tracking-tighter text-left pb-2 bg-gradient-to-r from-tw-purple via-tw-blue to-tw-blue text-transparent bg-clip-text"
           }
           style={{
             backgroundImage: "url('https://pub-3890daa6d3af4fe09ab0c284ce757dd9.r2.dev/Screen Shot 2023-07-11 at 5.27.25 PM.png')",
@@ -71,20 +71,20 @@ const Search = () => {
             <div className="pl-8">Your Web3.0 Domain ID Awaits</div>
           </h1>
 
-          <div className={"w-full md:w-3/4 space-y-4 pl-8"}>
+          <div className={"w-full lg:w-3/4 space-y-4 pl-8"}>
             <div className="">
               <form onSubmit={addItem}>
                 <div className="">
                   <p
                     className={
-                      "flex w-3/4 md:w-full text-lg font-light text-sm sm:text-sm md:text-sm md:text-lg xl:text-xl leading-relaxed text-apple-black pt-12 pb-4"
+                      "flex w-3/4 lg:w-full text-lg font-light text-sm sm:text-sm lg:text-sm lg:text-lg xl:text-xl leading-relaxed text-apple-black pt-12 pb-4"
                     }
                   >
                     Join the Web 3.0 revolution. Submit your email and preferred
                     DID below. We will guide you through the rest when ready.
                   </p>
-                  <div className="pt-4 md:space-y-2">
-                    <div className="flex w-3/4 sm:w-2/3 md:w-2/3 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2">
+                  <div className="pt-4 lg:space-y-2">
+                    <div className="flex w-3/4 sm:w-2/3 lg:w-2/3 flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-2">
                       <input
                         type="email"
                         placeholder="Your Email"
@@ -104,7 +104,7 @@ const Search = () => {
                             setNewItem({ ...newItem, pdid: e.target.value })
                         }
                       />
-                      <div className="pt-4 md:pt-0">
+                      <div className="pt-4 lg:pt-0">
                         <button
                           className={
                             "text-lg border bg-tw-black text-white hover:bg-tw-grey font-normal py-2 px-3 rounded-full shadow-md hover:shadow-lg w-12 h-12 bg-transparent text-lg flex items-center justify-center"
