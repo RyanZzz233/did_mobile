@@ -14,7 +14,7 @@ const Footer = () => {
       {(pathname === '/Start') &&(
       <div className="text-xxxs sm:text-xs md:text-md ">@Meta Metopia Technology Company Limited</div>)}
       {(pathname !== '/Start') &&(
-      <div className="text-xxxs sm:text-xs md:text-md pl-0 md:pl-60">@Meta Metopia Technology Company Limited</div>)}
+      <div className="text-xxxs sm:text-xs md:text-md pl-0 lg:pl-60">@Meta Metopia Technology Company Limited</div>)}
       <div>
         <div className={styles.social}>
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">

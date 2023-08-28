@@ -23,7 +23,7 @@
   }
 }  
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .inputwrapper {
     width: 600px; /* Half width at 'lg' size and above */
     margin-left: 0rem; /* equivalent to Tailwind's mb-8 */
